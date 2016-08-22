@@ -17,18 +17,38 @@ var express = require('express');
 //initialize instance of library, which we can call functions from
 var app = express();
 
+//store the data file as a variable
+var dataFile = require('./data/poems.json')
+
+//set environment variable for our application
+app.set('port', process.env.PORT || 3000);
+
 //load main route page, excecute funciton (literal)
 //recieve request, give response
 app.get('/', function (req, res) {
 
+	var info = '';
+	dataFile.poems.forEach(function(poem) {
+		var poemText = poem.text.join('</br>');
+		info += `
+			<h1> ${poem.title} </h1>
+			<h4> By: ${poem.author} </h4>
+			<h5> ${poem.date} </h5>
+			<p> ${poemText}
+		`;
+	});
+
 	//don't have to worry about mime type, can type in html here
-  res.send('<h1> Rein hold has a micro dong </h1>');
+  res.send(`
+  	<h1> My poems </h1>
+  	${info}
+  	`);
 });
 
 
-var server = app.listen(3000, function () {
+var server = app.listen(app.get('port'), function () {
 	//call back to write to console
-  console.log('Example app listening on port 3000!');
+  console.log('Example app listening on port' + app.get('port'));
 });
 
 
