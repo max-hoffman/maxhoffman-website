@@ -1,15 +1,3 @@
-// //http library that you use to handle a number of methods we need
-// var http = require('http');
-
-// //takes care of handling requests for data, and returning some information
-// var myServer = http.createServer(function(request,respose) {
-// 	response.writeHead(200, {"Content-Type" : "text/plain"});
-// 	response.write('Max Hoffman');
-// 	response.end();
-// 	});
-
-// //ask server to listen to specific port
-// myServer.listen(3000);
 
 //require the express library
 var express = require('express');
@@ -27,14 +15,26 @@ app.set('port', process.env.PORT || 3000);
 //recieve request, give response
 app.get('/', function (req, res) {
 
+
+
+	//don't have to worry about mime type, can type in html here
+  res.send(`
+  	<h1> Welcome </h1>
+  	<p> I use this space to collect my thoughts, keep track of projects, and post data. </p>
+  	`);
+});
+
+//poems route
+app.get('/poems', function (req, res) {
+
 	var info = '';
 	dataFile.poems.forEach(function(poem) {
 		var poemText = poem.text.join('</br>');
 		info += `
-			<h1> ${poem.title} </h1>
+			<h3> ${poem.title} </h3>
 			<h4> By: ${poem.author} </h4>
 			<h5> ${poem.date} </h5>
-			<p> ${poemText}
+			<p> ${poemText} </p>
 		`;
 	});
 
@@ -45,7 +45,21 @@ app.get('/', function (req, res) {
   	`);
 });
 
+//page for individual poem
+app.get('/poems/:poemid', function (req, res) {
 
+	var poem = dataFile.poems[req.params.poemid];
+	var poemText = poem.text.join('</br>');
+	//don't have to worry about mime type, can type in html here
+  res.send(`
+  	<h3> ${poem.title} </h3>
+	<h4> by: ${poem.author} </h4>
+	<h5> ${poem.date} </h5>
+	<p> ${poemText} </p>
+  	`);
+});
+
+//server active
 var server = app.listen(app.get('port'), function () {
 	//call back to write to console
   console.log('Example app listening on port' + app.get('port'));
