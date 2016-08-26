@@ -96,7 +96,7 @@
 		"author" : "Max Hoffman",
 		"date" : "August 20, 2016",
 		"text" : [
-			"I run in an obsidian blackness. ",
+			"I run in blackness. ",
 			"Rock spurs graze my body. ",
 			"I see only shadows,",
 			"but I know the path well. ",
@@ -183,5 +183,62 @@
 			"for the last time later that night, ",
 			"his brain had not been alive to remember meeting me. "
 		]
-	}]
+	},{
+		"title" : "First Memory",
+		"author" : "Max Hoffman",
+		"date" : "August 23, 2016",
+		"text" : [
+			"Waves fell from above,  ",
+			"deepening a sea of mud and clay  ",
+			"between my mom, brother and me,  ",
+			"and the dry warmth of the car.  ",
+			"  ",
+			"I was up to my knees,  ",
+			"squishing and plopping my way through the park.  ",
+			"Trudging, determined to keep moving,  ",
+			"But the car remained out of sight.  ",
+			"  ",
+			"I glanced at my mom for help,  ",
+			"Two dogs in one arm,  ",
+			"holding my brother in the other-  ",
+			"she's struggling. I go it alone.  ",
+			"  ",
+			"Seventeen years, we've been moving.  ",
+			"New dogs replaced those that have passed.  ",
+			"40 lbs of children became 400.  ",
+			"The car is still out of sight,  ",
+			"but our legs grow stronger every day.  "
+		]
+	},{
+		"title" : "Frary",
+		"author" : "Max Hoffman",
+		"date" : "August 24, 2016",
+		"text" : [
+			"I've spent thousands of hours watching a burning, agonized man,  ",
+			"Gifting fire to the world,  ",
+			"Descending into hell,  ",
+			"to be constitutively tortured for penance.  ",
+			" ",
+			"The castration came after, by those who found his manhood offensive.  ",
+			"Because in the entire 50 foot mural of the suffering man,  ",
+			"with whom I share four meals a day,  ",
+			"His dick is the real concern.  ",
+			"  ",
+			"Half of the world embraced fire,  ",
+			"the other scorned the man's sacrifice.  ",
+			"If only I could have some impact,  ",
+			"That half of the world approves.  ",
+			"  ",
+			"Always a wobbly, splintered chair,  ",
+			"Bruised knees fighting for space,  ",
+			"Half finished chicken, rice and milk.  ",
+			"Silently watching, from my own little hell.  ",
+			"  ",
+			"\"Forethought,\"  ",
+			"who knew the consequences of his cleverness,  ",
+			"but chose still to sacrifice for the greater good.  ",
+			"I still think half sets the the bar a little high.  "
+		]
+	}
+	]
 }
